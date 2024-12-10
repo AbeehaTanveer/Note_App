@@ -1,0 +1,44 @@
+
+.inputSearch {
+  /* background: transparent; */
+  /* border: none; */
+  /* outline: none; */
+  width: 80vw;
+  max-width: 400px;
+  font-size: 1.5em;
+  transition: padding 0.3s 0.2s ease;
+}
+
+
+input:focus {
+  padding-bottom: 2px;
+}
+input::placeholder{
+  color: #f1f5f7;
+}
+input:focus + .line::after {
+  transform: scaleX(1);
+}
+
+.field {
+  position: relative;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 9px;
+  background: #f1f5f7;
+}
+
+.line::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  background: #ac2d51;
+}
